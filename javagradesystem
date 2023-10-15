@@ -1,0 +1,42 @@
+//MONTALBO, ROMMEL M - BSIT 2F - PROG 3
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter your Name: ");
+                String fullname = scanner.nextLine();
+            System.out.println("-----------------");
+            System.out.println("Quiz is 30% of your Grade");
+            System.out.print("Enter Quiz 1: ");
+                Float quiz1 = scanner.nextFloat();
+            System.out.print("Enter Quiz 2: ");
+                Float quiz2 = scanner.nextFloat();
+            System.out.print("Enter Quiz 3: ");
+                Float quiz3 = scanner.nextFloat();
+            Float totalprelimquiz = (quiz1 + quiz2 + quiz3) / 3;   
+            System.out.println("Total Prelim Quiz: " + totalprelimquiz);
+            System.out.println("-----------------");
+            System.out.println("Class Standing is 30% of your Grade");
+            System.out.print("Attendance: ");
+                Float attendance = scanner.nextFloat();
+            System.out.print("Recitation: ");
+                Float recitation = scanner.nextFloat();
+            System.out.print("Seatwork: ");
+                Float seatwork = scanner.nextFloat(); 
+            System.out.print("Assignment: ");
+                Float assignment = scanner.nextFloat();  
+            Float classstanding = (attendance + recitation + seatwork + assignment) / 4;
+            System.out.println("Total Prelin Class: " + classstanding);
+            System.out.println("-----------------");
+            System.out.println("Prelim Exam is 35% of your Grade");
+            System.out.print("Enter your Prelim Exam: ");
+                Double prelimexam = scanner.nextDouble();
+            System.out.println("-----------------");
+            Double prelimgrade = (totalprelimquiz*.30) + (classstanding*.30) + (prelimexam*.40);
+            System.out.println("Congrats! " + fullname + " your Prelim Grade is " + prelimgrade);
+    }
+}
+
+
+
